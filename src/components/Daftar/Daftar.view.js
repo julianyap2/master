@@ -178,23 +178,6 @@ const Daftar = () => {
           />
         </div>
       </div>
-      <div class="form-group row">  
-        <div class="col-sm-10">
-          <div className="containerDropzone">
-          <span for="myfile">
-            Upload Foto Kartu Pertamina :{" "}
-          </span>
-          <input
-            type="file"
-            id="myfile"
-            name="myfile"
-            value={kartuPertamina}
-            onChange={(e) => setKartuPertamina(e.target.value)}
-          />
-          <br />
-          </div>
-        </div>
-      </div>
       <div class="form-group row">
         <input
           type="checkbox"
