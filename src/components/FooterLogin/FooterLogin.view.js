@@ -39,6 +39,8 @@ const Footer = () => {
             <br/>
             <Link to='/SyaratPangkalan-login'>Syarat Pangkalan</Link>
             <br/>
+            <Link to='/tentang-kami-login'>Tentang Kami</Link>
+            <br/>
           </p>
         </div>
         <div className='midFooter'>
