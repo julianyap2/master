@@ -14,6 +14,7 @@ import AddGalery from "./components/pages/AddGallery/AddGallery"
 import PangkalanLogin from "./components/pages/PangkalanLogin/PangkalanLogin.view";
 import InsideProfile from "./components/pages/AddSetoran/AddSetoran";
 import SyaratPangkalanLogin from "./components/pages/SyaratPeminjamanLogin/SyaratPeminjamanLogin";
+import AddSetoranPokok from "./components/pages/AddSetoranPokok/AddSetoranPokok";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route exact path='/SyaratPangkalan-login' element={<SyaratPangkalanLogin/>}/>
         <Route exact path='/pangkalan-login' element={<PangkalanLogin/>}/>
         <Route exact path='/add-setoran' element={<InsideProfile/>}/>
+        <Route exact path='/add-setoranpokok' element={<AddSetoranPokok/>}/>
       </Routes>
     </Router>
     

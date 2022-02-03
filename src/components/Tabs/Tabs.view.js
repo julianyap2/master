@@ -56,6 +56,12 @@ useEffect(()=>{
             <div className="tanggal">Tanggal</div>
             <div className="keterangan">Keterangan</div>
           </div>
+          {test.setoranPokokId.map((d)=>(
+             <div style={{display:'flex'}}>
+             <div className="tanggal">{moment(d.tanggal).format("DD-MM-YYYY")}</div>
+             <div className="keterangan">{d.deskripsi}</div>
+             </div>
+           ))}
         </div>
 
         <div
