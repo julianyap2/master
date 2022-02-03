@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Tabs, { TabPane } from "rc-tabs";
 import "rc-tabs/assets/index.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Setting = () => {
   const [name, setName] = useState("");
@@ -314,27 +315,6 @@ const Setting = () => {
         <TabPane tab="Akun" key="3">
           <div style={{ height: "60vh" }}>
             <form>
-              <h2 style={{ margin: "0 100px" }}>Ubah Email</h2>
-              <div class="form-group row">
-                <label
-                  for="email"
-                  style={{ marginLeft: "100px", marginTop: "30px" }}
-                  class="col-sm-2 col-form-label"
-                >
-                  Ubah Email
-                </label>
-                <div class="col-sm-10">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="email"
-                    className="inputan"
-                    style={{ marginLeft: "100px", width: "80%" }}
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </div>
-              </div>
               <h2 style={{ margin: "0 100px", marginTop: "60px" }}>
                 Ubah Password
               </h2>
@@ -385,6 +365,15 @@ const Setting = () => {
               >
                 Ubah Password
               </button>
+              <Link to='/beranda'>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style={{ marginTop: "10px", marginLeft: "485px" }}
+              >
+                Logout
+              </button>
+              </Link>
             </form>
           </div>
         </TabPane>
