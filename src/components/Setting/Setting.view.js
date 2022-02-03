@@ -17,6 +17,7 @@ const Setting = () => {
   const [noDihubungi, setNoDihubungi] = useState("");
   const [tanggalLahir, setTanggalLahir] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmpassword, setConfirmPassword] = useState("");
   const [test, setTest] = useState({});
   const [loading, setIsLoading] = useState(true);
 
@@ -102,6 +103,18 @@ const Setting = () => {
     const res = await axios.put(url, formData);
     console.log(res);
   };
+
+  const changePass = async (event)=>{
+    event.preventDefault();
+    let tes = JSON.parse(localStorage.getItem("user"))
+    const data = {
+      newPassword: password,
+      confirmNewPassword: confirmpassword
+    }
+    const url = `http://localhost:3000/api/v1/changePassword/${tes.idUser}`;
+    const res = await axios.put(url, data);
+    console.log(res);
+  }
   return loading ? (
     "Loading"
   ) : (
@@ -353,8 +366,8 @@ const Setting = () => {
                     id="password"
                     className="inputan"
                     style={{ marginLeft: "100px", width: "80%" }}
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    value={confirmpassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
                   />
                 </div>
               </div>
@@ -362,6 +375,7 @@ const Setting = () => {
                 type="submit"
                 class="btn btn-primary"
                 style={{ marginTop: "10px", marginLeft: "100px" }}
+                onClick={changePass}
               >
                 Ubah Password
               </button>
