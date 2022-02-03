@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import "./Tabs.styled.css";
+import moment from 'moment'
+
 
 function TabGroup() {
   const [toggleState, setToggleState] = useState(1);
@@ -61,14 +63,15 @@ useEffect(()=>{
         >
           <div className="containerTanggalKet">
             <div className="tanggal">Tanggal</div>
-           {test.setoranId.map((d)=>(
-             <div>{d.tanggal}</div>
-           ))}
             <div className="keterangan">Keterangan</div>
-            {test.setoranId.map((d)=>(
-             <div>{d.deskripsi}</div>
-           ))}
+            
           </div>
+          {test.setoranId.map((d)=>(
+             <div style={{display:'flex'}}>
+             <div className="tanggal">{moment(d.tanggal).format("DD-MM-YYYY")}</div>
+             <div className="keterangan">{d.deskripsi}</div>
+             </div>
+           ))}
         </div>
       </div>
     </div>
