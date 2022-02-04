@@ -14,12 +14,8 @@ import AddGalery from "./components/pages/AddGallery/AddGallery"
 import PangkalanLogin from "./components/pages/PangkalanLogin/PangkalanLogin.view";
 import InsideProfile from "./components/pages/AddSetoran/AddSetoran";
 import SyaratPangkalanLogin from "./components/pages/SyaratPeminjamanLogin/SyaratPeminjamanLogin";
-<<<<<<< HEAD
-import AddSetoranPokok from "./components/pages/AddSetoranPokok/AddSetoranPokok";
-=======
 import TentangKami from "./components/pages/TentangKami/TentangKami.view";
 import TentangKamiLogin from "./components/pages/TentangKamiLogin/TentangKamiLogin.view";
->>>>>>> fefa7ce891fb098b3d5b2c71adf91b02a211856a
 
 function App() {
   return (
