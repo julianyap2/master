@@ -12,7 +12,7 @@ const ProfileHeader = () => {
         try {
           let tes = JSON.parse(localStorage.getItem("user"))
           // console.log(tes.id);
-        const response = await axios.get(`http://localhost:3000/api/v1/member/${tes.id}`);
+        const response = await axios.get(`https://server-kopana.herokuapp.com/api/v1/member/${tes.id}`);
           console.log(response.data);
           setMember(response.data)
           setIsLoading(false)
