@@ -17,7 +17,7 @@ const InsideProfile = () => {
 
   const selectMembers = async () => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/v1/member`);
+      const response = await axios.get(`http://server-kopana.herokuapp.com/api/v1/member`);
       console.log(response.data.data);
       setMember(response.data.data);
       setIsLoading(false);
@@ -40,7 +40,7 @@ const InsideProfile = () => {
         deskripsi: deskripsi,
         memberId: selectMember
       };
-       const url = "http://localhost:3000/api/v1/setoranwajib";
+       const url = "http://server-kopana.herokuapp.com/api/v1/setoranwajib";
 
     const res = await axios.post(url, data);
     console.log(res);
