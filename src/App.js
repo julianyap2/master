@@ -16,6 +16,7 @@ import InsideProfile from "./components/pages/AddSetoran/AddSetoran";
 import SyaratPangkalanLogin from "./components/pages/SyaratPeminjamanLogin/SyaratPeminjamanLogin";
 import TentangKami from "./components/pages/TentangKami/TentangKami.view";
 import TentangKamiLogin from "./components/pages/TentangKamiLogin/TentangKamiLogin.view";
+import AddSetoranPokok from "./components/pages/AddSetoranPokok/AddSetoranPokok"
 
 function App() {
   return (
