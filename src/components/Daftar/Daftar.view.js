@@ -35,7 +35,7 @@ const Daftar = () => {
     // setSetuju(false);
 
     if (res.status == 200) {
-      window.open('/beranda-login','_self')
+      window.open('/login','_self')
     }
   };
   const {
