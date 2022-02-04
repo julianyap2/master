@@ -14,7 +14,7 @@ const Daftar = () => {
   const [kartuPertamina, setKartuPertamina] = useState([])
   const AddFormData = async (e) => {
     e.preventDefault();
-    const url = "http://server-kopana.herokuapp.com/api/v1/signUp"
+    const url = "https://server-kopana.herokuapp.com/api/v1/signUp"
     const data ={
       nama: name,
       password: password,

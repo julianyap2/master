@@ -14,7 +14,7 @@ const Login = () => {
   }
   async function handleSubmit(event){
       event.preventDefault()
-    const url = "http://server-kopana.herokuapp.com/api/v1/sign";
+    const url = "https://server-kopana.herokuapp.com/api/v1/sign";
     const data ={
       password: password,
       email: email,

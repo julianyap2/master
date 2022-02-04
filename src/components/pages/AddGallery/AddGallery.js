@@ -23,7 +23,7 @@ const AddGallery = () => {
     // formData.append('imageSuratTeraTimbangan', fotoProfile)
     // formData.append('imageKelengkapanSarana', selectedFile)
 
-    const url = "http://server-kopana.herokuapp.com/api/v1/galeri";
+    const url = "https://server-kopana.herokuapp.com/api/v1/galeri";
     const res = await axios.post(url, formData);
     console.log(res);
   }

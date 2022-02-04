@@ -38,7 +38,7 @@ const TitlebarGridList = () =>  {
 
   async function getData(){
     try {
-      const response = await axios.get('http://server-kopana.herokuapp.com/api/v1/galeri');
+      const response = await axios.get('https://server-kopana.herokuapp.com/api/v1/galeri');
       console.log(response);
       setFoto(response.data);
     } catch (error) {
@@ -57,7 +57,7 @@ const TitlebarGridList = () =>  {
         </GridListTile>
         {foto.data &&foto.data.map((tile) => (
           <GridListTile key={tile.img}>
-            <img src={'http://server-kopana.herokuapp.com/'+tile.imageUrl} alt={tile.title} />
+            <img src={'https://server-kopana.herokuapp.com/'+tile.imageUrl} alt={tile.title} />
             {console.log(tile.imageUrl)}
             <GridListTileBar
               title={tile.title}

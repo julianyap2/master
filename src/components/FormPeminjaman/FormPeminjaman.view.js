@@ -58,7 +58,7 @@ const FormPeminjaman = (props) => {
     formData.append('imageSuratTeraTimbangan', suratTeraTimbangan)
     formData.append('imageKelengkapanSarana', kelengkapanSarana)
     formData.append('imageKtp', ktp)
-    const url = "http://server-kopana.herokuapp.com/api/v1/formulir"
+    const url = "https://server-kopana.herokuapp.com/api/v1/formulir"
 
     const res = await axios.post(url, formData)
     console.log(res);
