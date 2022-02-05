@@ -3,6 +3,7 @@ import Tabs, { TabPane } from "rc-tabs";
 import "rc-tabs/assets/index.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import iziToast from "izitoast";
 
 const Setting = () => {
   const [name, setName] = useState("");
@@ -77,6 +78,12 @@ const Setting = () => {
       setTanggalLahir(response.data.tanggalLahir?response.data.tanggalLahir:"" )
       setNoDihubungi(response.data.nomerTelepon);
       setIsLoading(false);
+      if (response.status == 200) {
+        iziToast.success({
+          title: 'Berhasil',
+          message: 'Berhasil Mengganti Data',
+      });
+      }
     } catch (error) {
       console.error(error);
     }

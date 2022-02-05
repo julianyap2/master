@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState, useMemo } from "react";
 import { useDropzone } from "react-dropzone";
 import './Daftar.styled.css';
+import iziToast from "izitoast";
 
 const Daftar = () => {
   const [name, setName] = useState("");
@@ -36,6 +37,10 @@ const Daftar = () => {
 
     if (res.status == 200) {
       window.open('/login','_self')
+      iziToast.success({
+        title: 'Berhasil',
+        message: 'Berhasil! Silahkan Login',
+    });
     }
   };
   const {
